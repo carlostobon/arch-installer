@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# Begins installing things
+echo "Proceeding to install original repo packages.."
+pacman -Syu --noconfirm
+pacman_pkgs="./pacman.arch"
+
+pacman_content=$(<"$pacman_pkgs")
+pacman -Sy --noconfirm $pacman_content
+
+# Stablish network connection
+echo "Stablishing network connection..."
+#systemctl enable NetworkManager.service
+#systemctl start NetworkManager.service
+
+
+# Create user
+echo "Creating user..."
+read -p "Enter your username: " username
+useradd -m -g users -G wheel -s /bin/bash $username
+passwd $username
+
+
+# Place user in sudoers
+sed -i "s/\#\ \%wheel/\%wheel/" /etc/sudoers
+sed -i "s/\#\ \%sudo/\%sudo/" /etc/sudoers
+echo "$username ALL=(ALL:ALL) ALL" >> /etc/sudoers
+
+aur_content=$(cat ./aur.arch)
+
+su - $username <<EOF
+  # Yay installation
+  echo "Cloning and compiling yay packages manager..."
+  git clone https://aur.archlinux.org/yay.git
+  cd yay && makepkg -si --noconfirm && cd ../ && rm -r yay
+
+  # Aur pkgs installation
+  echo "Proceeding to install aur packages.."
+  yay -S --noconfirm $aur_content
+EOF
