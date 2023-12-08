@@ -35,3 +35,8 @@ unclutter
 networkmanager
 grub
 efibootmgr
+rsync
+ttf-joypixels
+arandr
+less
+dosfstools
