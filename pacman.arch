@@ -50,3 +50,4 @@ dosfstools
 nodejs
 ts-node
 openssh
+bash-completion
