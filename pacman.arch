@@ -1,3 +1,5 @@
+linux
+linux-firmware
 xorg-server
 xorg-xinit
 xmonad-contrib
@@ -9,9 +11,12 @@ zip
 unzip
 ufw
 pnpm
+npm
 pyright
 mypy
 sxiv
+rustup
+pass
 ranger
 reflector
 qutebrowser
@@ -40,3 +45,6 @@ ttf-joypixels
 arandr
 less
 dosfstools
+nodejs
+ts-node
+openssh
