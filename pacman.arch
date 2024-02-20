@@ -1,11 +1,15 @@
+base
 linux
 linux-firmware
+base-devel
+grub
+efibootmgr
+os-prober
+gvim
 xorg-server
 xorg-xinit
 xmonad-contrib
 git
-base
-base-devel
 xwallpaper
 zip
 unzip
@@ -38,8 +42,6 @@ ripgrep
 python-black
 unclutter
 networkmanager
-grub
-efibootmgr
 rsync
 ttf-joypixels
 arandr
