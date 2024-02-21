@@ -52,3 +52,5 @@ ts-node
 openssh
 bash-completion
 qbittorrent
+xclip
+pulseaudio
