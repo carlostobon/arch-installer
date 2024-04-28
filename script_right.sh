@@ -3,8 +3,8 @@
 ln -sf /usr/share/zoneinfo/America/Bogota /etc/localtime
 hwclock --systohc
 
-sed 's/#en_US.UTF-8\ UTF-8/en_US.UTF-8\ UTF-8/' > /etc/locale.gen
-sed 's/#en_US\ ISO-8859-1/en_US\ ISO-8859-1/' > /etc/locale.gen
+sed -i 's/#en_US.UTF-8\ UTF-8/en_US.UTF-8\ UTF-8/' bar
+sed -i 's/#en_US\ ISO-8859-1/en_US\ ISO-8859-1/' bar
 
 locale-gen
 
