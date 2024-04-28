@@ -1,5 +1,5 @@
 base
-linux
+linux-hardened
 linux-firmware
 base-devel
 grub
@@ -15,9 +15,7 @@ zip
 unzip
 ufw
 pnpm
-npm
 pyright
-mypy
 sxiv
 rustup
 pass
@@ -26,7 +24,6 @@ reflector
 qutebrowser
 docker
 docker-compose
-dmenu
 pavucontrol
 htop
 eza
@@ -55,3 +52,7 @@ qbittorrent
 xclip
 pulseaudio
 yt-dlp
+picom
+pigz
+rust-analyzer
+python-pip
