@@ -40,6 +40,7 @@ echo "cloning dotfiles..."
 git clone "https://github.com/carlostobon/dotfiles"
 mv dotfiles "/home/$username/.dotfiles"
 cd "/home/$username/.dotfiles"
+mkdir "/home/$username/.binaries"
 chmod a+x "./run.sh"
 ./run.sh
 
