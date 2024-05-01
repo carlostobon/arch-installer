@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/env sh
 
 # Begins installing things
 echo "Proceeding to install original repo packages.."
