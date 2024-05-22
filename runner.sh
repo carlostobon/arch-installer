@@ -37,33 +37,34 @@ echo "setting network manager..."
 systemctl enable NetworkManager.service
 systemctl start NetworkManager.service
 
-mkdir "/usr/share/fonts/ttf" \
-      "/home/$username/.local/bin" \
-      "/home/$username/.binaries" \
-      "/home/$username/.config/wallpaper"
+mkdir -p "/usr/share/fonts/ttf" \
+         "/home/$username/.local/bin" \
+         "/home/$username/.binaries"
 
 echo "copying fonts..."
 cp "fonts/comic_mono.ttf" "/usr/share/fonts/ttf"
 cp "fonts/comic_mono_bold.ttf" "/usr/share/fonts/ttf"
 
-echo "setting xmonad xorg server..."
-echo "exec xmonad" > "/home/$username/.xinitrc"
-
 echo "cloning dotfiles..."
 git clone "https://github.com/carlostobon/dotfiles" "/home/$username/.dotfiles"
 
-echo "running dotfiles..."
-(cd /home/$username/.dotfiles && ./run.sh)
+echo "setting dotfiles..."
+su - $username -c "cd /home/$username/.dotfiles && ./run.sh"
 chown -R ${username} /home/$username/.dotfiles
 
-echo "compiling xmonad..."
+echo "setting xmonad xorg server..."
+echo "exec xmonad" > "/home/$username/.xinitrc"
+
+
+echo "placing xmonad..."
 (cd /home/$username/.xmonad && \
       git clone https://github.com/xmonad/xmonad && \
       git clone https://github.com/xmonad/xmonad-contrib && \
-      stack upgrade && \
-      stack init && \
-      stack install)
+      stack upgrade)
+
+echo "compiling xmonad..."
 chown -R ${username} /home/$username/.xmonad
+su - $username -c "(cd /home/$username/.xmonad && stack init && stack install)"
 
 
 echo "Installation done! Once logged in proceed

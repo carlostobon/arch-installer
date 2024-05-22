@@ -1,0 +1,18 @@
+services:
+  installer:
+    #
+    # Note:
+    # The very first time use build then use image
+    #
+    #build: .
+    image: arch-installer-installer
+    volumes:
+      - ./runner.sh:/app/runner.sh
+    container_name: installer
+    restart: always
+    networks:
+      - installer-network
+    command: sh -c "sleep 10000"
+
+networks:
+  installer-network:
