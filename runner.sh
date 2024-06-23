@@ -42,8 +42,7 @@ mkdir -p "/usr/share/fonts/ttf" \
          "/home/$username/.binaries"
 
 echo "copying fonts..."
-cp "fonts/comic_mono.ttf" "/usr/share/fonts/ttf"
-cp "fonts/comic_mono_bold.ttf" "/usr/share/fonts/ttf"
+cp "fonts/*" "/usr/share/fonts/ttf/"
 
 echo "cloning dotfiles..."
 git clone "https://github.com/carlostobon/dotfiles" "/home/$username/.dotfiles"
