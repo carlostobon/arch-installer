@@ -59,3 +59,6 @@ zathura
 zathura-pdf-mupdf
 zip
 xdotool
+ruff
+eslint
+prettier
