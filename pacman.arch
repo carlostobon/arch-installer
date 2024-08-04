@@ -62,3 +62,7 @@ xdotool
 ruff
 eslint
 prettier
+xterm
+ntfs-3g
+btrfs-progs
+ollama
