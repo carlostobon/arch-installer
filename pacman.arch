@@ -68,3 +68,5 @@ btrfs-progs
 ollama
 clang
 dll
+npm
+cmake
