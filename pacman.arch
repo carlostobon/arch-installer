@@ -72,3 +72,4 @@ cmake
 postgresql
 fd
 texlive
+imagemagick
