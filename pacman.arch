@@ -70,3 +70,5 @@ dll
 npm
 cmake
 postgresql
+fd
+texlive
