@@ -12,7 +12,7 @@ genfstab -U /mnt > /mnt/etc/fstab
 cp aurh.arch /mnt
 cp -r colemak-dh /mnt
 cp -r fonts /mnt
-cp runner.sh /mnt
+cp secondary.sh /mnt
 
 # Jump into installation
 arch-chroot /mnt
