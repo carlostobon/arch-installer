@@ -74,3 +74,4 @@ fd
 texlive
 imagemagick
 biome
+shellcheck
