@@ -75,3 +75,5 @@ texlive
 imagemagick
 biome
 shellcheck
+podman
+podman-compose
