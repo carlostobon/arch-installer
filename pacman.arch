@@ -78,3 +78,4 @@ shellcheck
 podman
 podman-compose
 poppler
+python-adblock
