@@ -30,7 +30,6 @@ pigz
 pnpm
 pulseaudio
 pyright
-python-black
 python-pip
 qbittorrent
 qutebrowser
@@ -40,7 +39,6 @@ ripgrep
 rsync
 rust-analyzer
 rustup
-stack
 sxiv
 tmux
 ts-node
@@ -52,6 +50,13 @@ xclip
 xorg-apps
 xorg-server
 xorg-xinit
+xorg-xmessage
+libx11
+libxft
+libxinerama
+libxrandr
+libxss
+pkgconf
 xwallpaper
 yt-dlp
 zathura
@@ -73,7 +78,6 @@ postgresql
 fd
 texlive
 imagemagick
-biome
 shellcheck
 podman
 podman-compose
@@ -83,4 +87,5 @@ lsd
 uv
 go
 gopls
-tsserver
+stack
+typescript-language-server

@@ -1,14 +1,15 @@
 #!/bin/env sh
 
-echo "Proceeding to install pacman managed packages..."
-# Install all pkgs in file pacman.ard
-pacstrap -K /mnt $(cat pacman.arch)
+echo "Proceeding to install Pacman managed packages..."
 
-# Generates uuids for booting and
+# Install all pkgs in file pacman.ard
+pacstrap -K /mnt "$(cat pacman.arch)"
+
+# Generates UUIDS for booting and
 # system handling.
 genfstab -U /mnt > /mnt/etc/fstab
 
-# Copy files into tinstallation
+# Copy files into installation
 cp aurh.arch /mnt
 cp -r colemak-dh /mnt
 cp -r fonts /mnt
