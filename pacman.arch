@@ -80,3 +80,7 @@ podman-compose
 poppler
 python-adblock
 lsd
+uv
+go
+gopls
+tsserver
