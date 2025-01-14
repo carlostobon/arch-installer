@@ -28,7 +28,6 @@ pavucontrol
 picom
 pigz
 pnpm
-pulseaudio
 pyright
 python-pip
 qbittorrent
@@ -91,3 +90,6 @@ stack
 typescript-language-server
 unrar
 pass-otp
+alsa-utils
+alsa-firmware
+pulseaudio
